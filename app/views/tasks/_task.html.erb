@@ -2,7 +2,9 @@
   <div style="width: 20pxrem">
     <%= checkbox_tag :completed, task.completed, task.completed %>
   </div>
-  <div>
+  <div style="display: flex; flex: 1; align-items: center; justify-content: space-between; gap: 20px">
     <%= task.content %>
+
+    <%= button_to "✕", task_path(task), method: :delete %>
   </div>
 </div>
