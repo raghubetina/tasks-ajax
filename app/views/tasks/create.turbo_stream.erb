@@ -1,5 +1,5 @@
-<%= turbo_stream.prepend "tasks", 
-      partial: "tasks/task", 
-      locals: { task: @task, animate: true } %>
-      
+<%= turbo_stream.prepend "tasks" do %>
+  <%= render "task", task: @task, fade_in: true %>
+<% end %>
+
 <%= turbo_stream.replace "new_task_form", partial: "new_task_form", locals: { task: Task.new } %>
