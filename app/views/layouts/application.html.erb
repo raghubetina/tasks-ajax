@@ -22,7 +22,7 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body style="max-width: 480px; margin: auto; padding: 40px 0;">
+  <body data-turbo-stream="false" style="max-width: 480px; margin: auto; padding: 40px 0;">
     <%= render "shared/flashes" %>
 
     <%= yield %>
