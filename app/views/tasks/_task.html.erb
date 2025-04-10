@@ -1,4 +1,4 @@
-<div id="<%= dom_id task %>" style="display: flex; gap: 10px">
+<div id="<%= dom_id task %>" style="display: flex; gap: 10px" data-controller="fade">
   <div style="width: 20pxrem">
     <%= checkbox_tag :completed, task.completed, task.completed %>
   </div>
