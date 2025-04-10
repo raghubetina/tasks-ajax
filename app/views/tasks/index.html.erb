@@ -2,17 +2,7 @@
 
 <h1>Tasks</h1>
 
-<%= form_with(model: Task.new) do |form| %>
-  <div style="display: flex; gap: 20px; margin-bottom: 20px">
-    <div style="flex: 1">
-      <%= form.label :content, style: "display: none" %>
-      <%= form.text_field :content, style: "width: 100%" %>
-    </div>
-    <div>
-      <%= form.submit %>
-    </div>
-  </div>
-<% end %>
+<%= render "new_task_form", task: @task %>
 
 <div id="tasks" style="display: flex; flex-direction: column; gap: 10px">
   <%= render @tasks %>
