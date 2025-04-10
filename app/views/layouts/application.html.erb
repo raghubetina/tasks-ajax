@@ -23,6 +23,8 @@
   </head>
 
   <body style="max-width: 480px; margin: auto; padding: 40px 0;">
+    <div>User ID: <%= cookies[:random_id] %></div>
+    
     <%= render "shared/flashes" %>
 
     <%= yield %>
