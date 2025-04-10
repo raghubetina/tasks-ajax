@@ -57,6 +57,7 @@ class TasksController < ApplicationController
     respond_to do |format|
       format.html { redirect_to tasks_path, status: :see_other, notice: "Task was successfully destroyed." }
       format.json { head :no_content }
+      format.turbo_stream
     end
   end
 
