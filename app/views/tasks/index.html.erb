@@ -1,5 +1,7 @@
 <% content_for :title, "Tasks" %>
 
+<%= turbo_stream_from "tasks" %>
+
 <h1>Tasks</h1>
 
 <%= render "new_task_form", task: @task %>
