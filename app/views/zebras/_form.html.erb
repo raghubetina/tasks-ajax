@@ -1,0 +1,23 @@
+<%= form_with(model: zebra, data: { turbo_permanent: true }) do |form| %>
+  <% if zebra.errors.any? %>
+  <div style="color: red">
+    <h2><%= pluralize(zebra.errors.count, "error") %> prohibited this zebra from being saved:</h2>
+
+    <ul>
+      <% zebra.errors.each do |error| %>
+        <li><%= error.full_message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+  <div style="display: flex; gap: 20px; margin-bottom: 20px">
+    <div style="flex: 1">
+      <%= form.label :name, style: "display: none" %>
+      <%= form.text_field :name, style: "width: 100%", placeholder: "Enter zebra name" %>
+    </div>
+    <div>
+      <%= form.submit %>
+    </div>
+  </div>
+<% end %>

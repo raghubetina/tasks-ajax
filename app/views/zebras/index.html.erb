@@ -2,10 +2,13 @@
 
 <%= turbo_stream_from "zebras" %>
 
-<div id="zebras">
+<div id="zebras" style="display: flex; flex-direction: column; gap: 10px">
   <% @zebras.each do |zebra| %>
     <%= render partial: "zebra", locals: { zebra: zebra } %>
   <% end %>
 </div>
 
-<%#= console %>
+<div style="margin-top: 20px;">
+  <h2>Add a new zebra</h2>
+  <%= render "form", zebra: @zebra %>
+</div>

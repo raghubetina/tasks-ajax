@@ -26,14 +26,19 @@
   </head>
 
 
-  <body style="max-width: 480px; margin: auto; padding: 40px 0;">
-    <turbo-frame id="my-frame" refresh="morph">
-
+  <body style="max-width: 480px; margin: auto; padding: 40px 0 400px;">
     <div>User ID: <%= cookies[:random_id] %></div>
+
+    <div>
+      <%= link_to "Tasks", root_path %>
+    </div>
+
+    <div>
+      <%= link_to "Zebras", zebras_path %>
+    </div>
     
     <%= render "shared/flashes" %>
 
     <%= yield %>
-    </turbo-frame>
   </body>
 </html>
