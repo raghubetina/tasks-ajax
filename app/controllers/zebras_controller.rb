@@ -32,7 +32,7 @@ class ZebrasController < ApplicationController
       if @zebra.update(zebra_params)
         format.html { redirect_to zebras_url, notice: "Zebra was successfully updated." }
         format.json { render :show, status: :ok, location: @zebra }
-        # format.turbo_stream
+        format.turbo_stream
       else
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @zebra.errors, status: :unprocessable_entity }
