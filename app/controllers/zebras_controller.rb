@@ -13,7 +13,7 @@ class ZebrasController < ApplicationController
       if @zebra.save
         format.html { redirect_back fallback_location: zebras_url, notice: "Zebra was successfully created." }
         format.json { render :show, status: :created, location: @zebra }
-        # format.turbo_stream { render turbo_stream: turbo_stream.refresh(request_id: nil) }
+        format.turbo_stream
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @zebra.errors, status: :unprocessable_entity }

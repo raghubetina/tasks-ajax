@@ -1,4 +1,4 @@
-<%= form_with(model: zebra, data: { turbo_permanent: true }) do |form| %>
+<%= form_with(model: zebra) do |form| %>
   <% if zebra.errors.any? %>
   <div style="color: red">
     <h2><%= pluralize(zebra.errors.count, "error") %> prohibited this zebra from being saved:</h2>
