@@ -20,13 +20,20 @@
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+
+    <meta name="turbo-refresh-method" content="morph">
+    <meta name="turbo-refresh-scroll" content="preserve">
   </head>
 
+
   <body style="max-width: 480px; margin: auto; padding: 40px 0;">
+    <turbo-frame id="my-frame" refresh="morph">
+
     <div>User ID: <%= cookies[:random_id] %></div>
     
     <%= render "shared/flashes" %>
 
     <%= yield %>
+    </turbo-frame>
   </body>
 </html>

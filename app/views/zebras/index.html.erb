@@ -1,0 +1,11 @@
+<h1>Zebras</h1>
+
+<%= turbo_stream_from "zebras" %>
+
+<div id="zebras">
+  <% @zebras.each do |zebra| %>
+    <%= render partial: "zebra", locals: { zebra: zebra } %>
+  <% end %>
+</div>
+
+<%#= console %>
