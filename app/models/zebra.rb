@@ -14,4 +14,6 @@ class Zebra < ApplicationRecord
   after_create_commit -> { broadcast_refresh_to "zebras" }
   after_update_commit -> { broadcast_refresh_to "zebras" }
   after_destroy_commit -> { broadcast_refresh_to "zebras" }
+  
+  validates :name, presence: true
 end

@@ -1,7 +1,14 @@
 <%= form_with(model: zebra, method: :patch, style: "width: 100%", data: { turbo_stream: true }) do |form| %>
+  <% if zebra.errors.any? %>
+    <div style="color: red; margin-bottom: 10px;">
+      <% zebra.errors.full_messages.each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+  <% end %>
   <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
     <div style="flex: 1">
-      <%= form.text_field :name, style: "width: 100%" %>
+      <%= form.text_field :name, style: "width: 100%", aria: { invalid: zebra.errors[:name].present? } %>
     </div>
     <div style="display: flex; gap: 10px;">
       <%= form.submit "Save" %>
