@@ -1,0 +1,11 @@
+<%= form_with(model: zebra, method: :patch, style: "width: 100%", data: { turbo_stream: true }) do |form| %>
+  <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+    <div style="flex: 1">
+      <%= form.text_field :name, style: "width: 100%" %>
+    </div>
+    <div style="display: flex; gap: 10px;">
+      <%= form.submit "Save" %>
+      <%= link_to "Cancel", zebra_path(zebra), data: { turbo_stream: true } %>
+    </div>
+  </div>
+<% end %>

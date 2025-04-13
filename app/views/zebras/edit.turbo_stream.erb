@@ -1,0 +1,5 @@
+<%= turbo_stream.replace dom_id(@zebra) do %>
+  <div id="<%= dom_id @zebra %>" style="display: flex; justify-content: space-between; align-items: center;">
+    <%= render "edit_form", zebra: @zebra %>
+  </div>
+<% end %>
