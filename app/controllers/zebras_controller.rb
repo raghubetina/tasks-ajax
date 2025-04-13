@@ -26,7 +26,6 @@ class ZebrasController < ApplicationController
     respond_to do |format|
       format.html { redirect_to zebras_url, notice: "Zebra was successfully destroyed." }
       format.json { head :no_content }
-      format.turbo_stream { head :no_content }
     end
   end
 
